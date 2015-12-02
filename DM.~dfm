@@ -1,0 +1,77 @@
+object fDM: TfDM
+  OldCreateOrder = False
+  Left = 327
+  Top = 133
+  Height = 508
+  Width = 495
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=ok.md' +
+      'b;Mode=Share Deny None;Persist Security Info=False;Jet OLEDB:Sys' +
+      'tem database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Pa' +
+      'ssword="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mod' +
+      'e=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Tr' +
+      'ansactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create' +
+      ' System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLED' +
+      'B:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Without R' +
+      'eplica Repair=False;Jet OLEDB:SFP=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 32
+    Top = 32
+  end
+  object DSLichData: TDataSource
+    DataSet = TLichData
+    Left = 192
+    Top = 104
+  end
+  object DSDoljnost: TDataSource
+    DataSet = TDoljnost
+    Left = 192
+    Top = 168
+  end
+  object DSTelephones: TDataSource
+    DataSet = TTelephones
+    Left = 192
+    Top = 232
+  end
+  object DSAdres: TDataSource
+    DataSet = TAdres
+    Left = 192
+    Top = 296
+  end
+  object TLichData: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'LichData'
+    Left = 80
+    Top = 104
+  end
+  object TDoljnost: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Doljnost'
+    Left = 80
+    Top = 168
+  end
+  object TTelephones: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Telephones'
+    Left = 80
+    Top = 232
+  end
+  object TAdres: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Adres'
+    Left = 80
+    Top = 296
+  end
+end
